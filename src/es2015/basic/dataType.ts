@@ -65,3 +65,10 @@
     let a: {key: string, value: string} = {key: "key", value: "value"};
     console.log(a.key, a.value); // key value
 }
+
+{
+    // if 会将 0, "", null, undefined, NaN 隐式地转换为布尔值 false
+    if (!0 && !"" && !null && !undefined && !NaN) {
+        console.log("if 条件的隐式转换");
+    }
+}

@@ -2,6 +2,7 @@
     console.log(undefined == null, undefined === null); // true false
     console.log(typeof null, typeof undefined); // object undefined
     console.log(Number(null), Number(undefined)); // 0 NaN
+    console.log(Boolean(null), Boolean(undefined)); // false false
 }
 
 {

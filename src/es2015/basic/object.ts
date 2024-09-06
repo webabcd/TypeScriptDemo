@@ -14,10 +14,10 @@
             return "hello";
         },
         helloNew() { // 定义对象的方法时，可以省略 function 关键字
-            return "hello";
+            return this.helloOld(); // 注：这里的 this 指向的是对象本身（因为 this 的值是在运行时确定的，所以其指向了对象本身）
         },
         helloLambda: () => { // 定义对象的方法时，可以使用 lambda 表达式
-            return "hello";
+            return c.helloOld();  // 注：在 lambda 表达式中，这里如果用 this 则其指向的是全局对象，而不是对象本身（因为 lambda 表达式中，this 的值是在定义时确定的，所以其指向了全局对象）
         }
     }
     console.log(`${c.helloOld()}, ${c.helloNew()}, ${c.helloLambda()}`);
