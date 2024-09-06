@@ -26,3 +26,5 @@
 - es2015/basic/set.ts
 12. map
 - es2015/basic/map.ts
+13. function
+- es2015/basic/function.ts
