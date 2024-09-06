@@ -10,4 +10,9 @@
 
     // 将 boolean 类型的数据转换为 string 类型
     console.log(String(true), String(false)); // true false
+
+    // if 会将 0, "", null, undefined, NaN 隐式地转换为布尔值 false
+    if (!0 && !"" && !null && !undefined && !NaN) {
+        console.log("if 条件的隐式转换");
+    }
 }
