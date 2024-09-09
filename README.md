@@ -26,11 +26,13 @@
 - es2015/basic/tuple.ts
 
 ### 类
-1. function
-- es2015/class/function.ts
-2. interface
-- es2015/class/interface.ts
-3. object
-- es2015/class/object.ts
-4. enum
+1. enum
 - es2015/class/enum.ts
+2. function
+- es2015/class/function.ts
+3. interface
+- es2015/class/interface.ts
+4. object
+- es2015/class/object.ts
+5. class
+- es2015/class/class.ts
