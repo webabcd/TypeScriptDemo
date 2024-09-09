@@ -36,3 +36,5 @@
 - es2015/class/object.ts
 5. class
 - es2015/class/class.ts
+6. generics
+- es2015/class/generics.ts

@@ -2,7 +2,7 @@
     class Person {
         // 注：类的属性和方法支持 3 种访问修饰符，分别是 private, protected, public（默认都是 public 的）
 
-        // 属性（不用初始化）
+        // 属性（不用初始化），注意此处 ? 的用法
         age?:number;
         // 属性（声明时初始化）
         weight:number = 0;
@@ -43,8 +43,12 @@
     console.log(a.hello(), `gender:${a.gender}`, `weight:${a.weight}`); // id:123 name:webabcd gender:male weight:50
 
     console.log(a.age); // undefined
+    // 注意此处 ! 的用法，如果不加 ! 的话会编译报错的
+    console.log(a.age! * 2); // NaN
     a.age = 44;
     console.log(a.age); // 44
+    // 注意此处 ! 的用法，如果不加 ! 的话会编译报错的
+    console.log(a.age! * 2); // 88
 
     a.description = "I am wanglei.";
     console.log(a.description); // I am wanglei.
