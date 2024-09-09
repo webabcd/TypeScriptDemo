@@ -72,3 +72,20 @@
         console.log("if 条件的隐式转换");
     }
 }
+
+{
+    // 通过 type 指定类型别名
+    type Name = string;
+    type NameMethod = () => string;
+    type NameOrMethod = Name | NameMethod;
+    function getName(p: NameOrMethod): Name {
+        if (typeof p === 'string') {
+            return p;
+        } else {
+            return p();
+        }
+    }
+
+    console.log(getName("webabcd")); // webabcd
+    console.log(getName(() => "webabcd")); // webabcd
+}
