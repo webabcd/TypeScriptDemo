@@ -38,3 +38,9 @@
 - es2015/class/class.ts
 6. generics
 - es2015/class/generics.ts
+
+### 进阶
+1. promise
+- es2015/advanced/promise.ts
+2. async/await
+- es2015/advanced/async_await.ts
