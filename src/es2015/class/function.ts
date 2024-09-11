@@ -6,6 +6,10 @@
     function f2(x:string, y:string):void {
         
     }
+    // 返回值的类型也可以推导出来
+    function f3(x:number, y:number) {
+        return x * y
+    }
 
 
     // 参数默认值
