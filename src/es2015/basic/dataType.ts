@@ -39,13 +39,16 @@
     // 通过 typeof 判断数据类型，如果是对象类型，则获取到的一律是 object，无法获取到具体的对象类型
     console.log(typeof b == 'object'); // true
 
+    // 通过 typeof 也可以判断是否是 function
+    console.log(typeof b.getDate == 'function'); // true
+
     // 如果是对象类型，则需要通过 instanceof 判断具体的对象类型
     console.log(b instanceof Date); // true
 }
 
 {
     // 联合类型，可以定义变量为多个数据类型中的一个
-    let a: number |string;
+    let a: number | string;
     a = 10;
     console.log(typeof a); // number
     a = "abc";
@@ -88,4 +91,28 @@
 
     console.log(getName("webabcd")); // webabcd
     console.log(getName(() => "webabcd")); // webabcd
+}
+
+{
+    class Animal {
+        constructor(public name: string) { 
+        }
+    }
+    class Dog extends Animal {
+        run() {
+            console.log("run");
+        }
+    }
+
+    function f1(animal: Animal)
+    {
+        // 通过 instanceof 判断一个基类对象是否是某个子类对象
+        if (animal instanceof Dog) 
+        {
+            // 通过 as 将基类对象转换为子类对象
+            let dog = animal as Dog;
+            dog.run();
+        }
+    }
+    f1(new Dog("dog"));
 }

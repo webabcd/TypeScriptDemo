@@ -145,3 +145,27 @@
     a.hello3();
     a.hello4();
 }
+
+{
+    class Animal {
+        constructor(public name: string) { 
+        }
+    }
+    class Dog extends Animal {
+        run() {
+            console.log("run");
+        }
+    }
+
+    function f1(animal: Animal)
+    {
+        // 通过 instanceof 判断一个基类对象是否是某个子类对象
+        if (animal instanceof Dog) 
+        {
+            // 通过 as 将基类对象转换为子类对象
+            let dog = animal as Dog;
+            dog.run();
+        }
+    }
+    f1(new Dog("dog"));
+}
