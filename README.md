@@ -61,3 +61,9 @@
 - es2015/advanced/iterator_generator.ts
 5. proxy, reflect
 - es2015/advanced/proxy_reflect.ts
+
+### 第三方库
+1. 类型声明
+- es2015/third/typeDeclaration.ts
+2. crypto-js
+- es2015/third/cryptojs.ts
