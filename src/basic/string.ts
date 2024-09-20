@@ -78,3 +78,11 @@
     // trim() - 去除字符串两侧的空白字符（来自 es5.1）
     console.log('  hello world  '.trim()); // "hello world"
 }
+
+// es2021 新特性
+{
+    const str = 'aaabbbccc';
+    console.log(str.replace("b", "z")); // aaazbbccc
+    // replaceAll() - 替换所有匹配的字符串，而不仅仅是第一个匹配的字符串（来自 es2021）
+    console.log(str.replaceAll("b", "z")); // aaazzzccc
+}
