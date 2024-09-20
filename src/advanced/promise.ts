@@ -134,3 +134,52 @@
         console.log(exception) // exception 7
     });
 }
+
+// es2018 新特性
+// 新增了 Promise.prototype.finally()
+{
+    const p8 = new Promise((resolve, reject) => {
+        let x = new Date().getTime() % 3;
+        if (x == 0) {
+            resolve("fulfilled 8");
+        } else if (x == 1) {
+            reject("rejected 8");
+        } else if (x == 2) {
+            throw "exception 8";
+        }
+    });
+    // catch() - 捕获 Promise 中的 throw 的异常
+    // finally() - 无论 Promise 是 fulfilled 还是 rejected 还是抛出了异常，最后都会执行 finally()
+    p8.then(value => {
+        console.log(value) // fulfilled 8
+    }, error => {
+        console.log(error) // rejected 8
+    }).catch(exception => {
+        console.log(exception) // exception 8
+    }).finally(() => {  // 这个 finally 是 es2018 新增的
+        console.log("finally 8"); // finally
+    });
+}
+
+// es2020 新特性
+{
+    const p9 = [
+        Promise.resolve("p9_1_resolve"),
+        Promise.reject("p9_2_reject"),
+        Promise.resolve("p9_3_resolve")
+    ];
+    
+    // allSettled() - 等待所有 Promise 都完成（无论是 fulfilled 还是 rejected），并返回一个包含所有 Promise 的状态的数组
+    Promise.allSettled(p9).then(results => {
+        results.forEach(result => {
+            // 状态是 fulfilled 或 rejected
+            if (result.status === 'fulfilled') {
+                // 状态是 fulfilled 时，可以通过 value 获取 resolve 的值
+                console.log(result.value); // p9_1_resolve p9_3_resolve
+            } else {
+                // 状态是 rejected 时，可以通过 reason 获取 reject 的值
+                console.log(result.reason); // p9_2_reject
+            }
+        });
+    });
+}

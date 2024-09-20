@@ -2,68 +2,71 @@
 
 
 ### 基础
-1. var, let, const
-- es2015/basic/var_let_const.ts
-2. 数据类型
-- es2015/basic/dataType.ts
-3. null, undefined
-- es2015/basic/null_undefined.ts
-4. boolean
-- es2015/basic/boolean.ts
-5. number
-- es2015/basic/number.ts
-6. string
-- es2015/basic/string.ts
-7. symbol
-- es2015/basic/symbol.ts
-8. array
-- es2015/basic/array.ts
-9. set
-- es2015/basic/set.ts
-10. map
-- es2015/basic/map.ts
-11. tuple
-- es2015/basic/tuple.ts
+1. 基础
+- basic/basic.ts
+2. var, let, const
+- basic/var_let_const.ts
+3. 数据类型
+- basic/dataType.ts
+4. null, undefined
+- basic/null_undefined.ts
+5. boolean
+- basic/boolean.ts
+6. number
+- basic/number.ts
+7. string
+- basic/string.ts
+8. symbol
+- basic/symbol.ts
+9. array
+- basic/array.ts
+10. set
+- basic/set.ts
+11. map
+- basic/map.ts
+12. tuple
+- basic/tuple.ts
 
 ### 类
 1. enum
-- es2015/class/enum.ts
+- class/enum.ts
 2. function
-- es2015/class/function.ts
+- class/function.ts
 3. interface
-- es2015/class/interface.ts
+- class/interface.ts
 4. object
-- es2015/class/object.ts
+- class/object.ts
 5. class
-- es2015/class/class.ts
+- class/class.ts
 6. generics
-- es2015/class/generics.ts
+- class/generics.ts
 7. 模块
-- es2015/module/main.ts
-- es2015/module/a.ts
-- es2015/module/b.ts
-- es2015/module/c.ts
-- es2015/module/d.ts
-- es2015/module/e.ts
-- es2015/module/f.ts
-- es2015/module/g.ts
-- es2015/module/h.ts
-- es2015/module/i.ts
+- module/main.ts
+- module/dynamicImport.ts
+- module/a.ts
+- module/b.ts
+- module/c.ts
+- module/d.ts
+- module/e.ts
+- module/f.ts
+- module/g.ts
+- module/h.ts
+- module/i.ts
 
 ### 进阶
 1. ArrayBuffer
-- es2015/advanced/arrayBuffer.ts
+- advanced/arrayBuffer.ts
 2. promise
-- es2015/advanced/promise.ts
+- advanced/promise.ts
 3. async/await
-- es2015/advanced/async_await.ts
+- advanced/async_await.ts
 4. iterator, generator
-- es2015/advanced/iterator_generator.ts
+- advanced/iterator_generator.ts
 5. proxy, reflect
-- es2015/advanced/proxy_reflect.ts
+- advanced/proxy_reflect.ts
 
 ### 第三方库
 1. 类型声明
-- es2015/third/typeDeclaration.ts
+- third/typeDeclaration.ts
 2. crypto-js
-- es2015/third/cryptojs.ts
+- third/cryptojs.ts

@@ -10,7 +10,8 @@
         name;
         // 只读属性（在构造函数中初始化）
         readonly id;
-        // 构造函数（注：其中的 public gender:string 会自动生成一个名为 gender 的属性，并会自动为此属性赋值）
+        // 构造函数
+        // 注：其中的 public gender:string 会自动生成一个名为 gender 的属性，并需要在构造函数中初始化，如果不想在构造函数中初始化，则可以用 public gender?:string
         constructor(name:string, id:number, public gender:string) {
             this.name = name;
             this.id = id;

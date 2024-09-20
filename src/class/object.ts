@@ -146,8 +146,6 @@
     // 注：能用 Reflect 的方法就用 Reflect 的，而不要再用 Object 的了
 
 
-
-
     // 对象的解构赋值（destructuring）
     // 将值赋给同属性名指向的变量
     let {a: x1, b: x2} = {a: "aaa", b: "bbb"};
@@ -164,4 +162,15 @@
     // 未被解构的都放入 ... 标记的变量
     let {y1, y2, ...yyy} = {y5: 5, y1: 1, y2: 2, y3: 3, y4: 4};
     console.log(y1, y2, yyy); // 1 2 {y5: 5, y3: 3, y4: 4}
+}
+
+// es2017 新特性
+{
+    let d = {k1: "aaa", k2: "bbb"};
+    // Object.values() - 遍历指定对象的 value（只能遍历可枚举的）
+    let values = Object.values(d);
+    // Object.entries() - 遍历指定对象的 key/value（只能遍历可枚举的）
+    let entries = Object.entries(d);
+    console.log(values); // ['aaa', 'bbb']
+    console.log(entries); // [["k1", "aaa"], ["k2", "bbb"]]
 }

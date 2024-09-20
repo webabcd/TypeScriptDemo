@@ -10,6 +10,12 @@
     function f3(x:number, y:number) {
         return x * y
     }
+    // 允许在函数参数列表和调用时使用尾随逗号（这个逗号没有实际意义，只是为了可以方便地添加或删除参数）
+    function f4(x:number, y:number, ) {
+
+    }
+    f4(1, 2)
+    f4(1, 2, )
 
 
     // 参数默认值

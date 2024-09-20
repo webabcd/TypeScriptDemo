@@ -60,3 +60,21 @@
     console.log(i`key1: ${"value1"}, key2: ${"value2"}`);
     // key1: value1, key2: value2
 }
+
+// es2017 新特性
+{
+    // padStart() - 指定字符串的最小长度，以及当长度不够时左侧需要补全的字符串
+    console.log("abc".padStart(10, "x")) // xxxxxxxabc
+    // padEnd() - 指定字符串的最小长度，以及当长度不够时右侧需要补全的字符串
+    console.log("abc".padEnd(10, "x")) // abcxxxxxxx
+}
+
+// es2019 新特性
+{
+    // trimStart() - 去除字符串左侧的空白字符（来自 es2019）
+    console.log('  hello world  '.trimStart()); // "hello world  "
+    // trimEnd() - 去除字符串右侧的空白字符（来自 es2019）
+    console.log('  hello world  '.trimEnd()); // "  hello world"
+    // trim() - 去除字符串两侧的空白字符（来自 es5.1）
+    console.log('  hello world  '.trim()); // "hello world"
+}

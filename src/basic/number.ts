@@ -69,3 +69,10 @@
     console.log(Math.floor(11.7)); // 11
     console.log(Math.floor(-11.7)); // -12
 }
+
+// es2016 新特性
+{
+    // 幂运算符 **
+    // 下面的例子用于计算 2 的 10 次方
+    console.log(2 ** 10) // 1024
+}
