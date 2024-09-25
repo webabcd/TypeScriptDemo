@@ -4,8 +4,8 @@
     const age = 40;
     const a = {name, age}; // 定义对象时省略属性名（其属性名默认为变量名称）
     const b = {name: name, age: age}; // 这是 es5 写法，等价于上面的
-    console.log(`${JSON.stringify(a)}, ${JSON.stringify(b)}`);
-    // {"name":"webabcd","age":40}, {"name":"webabcd","age":40}
+    console.log(`${JSON.stringify(a)}, ${JSON.stringify(b)}, ${b.name}, ${b["name"]}`);
+    // {"name":"webabcd","age":40}, {"name":"webabcd","age":40}, webabcd, webabcd
 
 
     // 定义对象的方法时，可以省略 function 关键字或者使用 lambda 表达式
