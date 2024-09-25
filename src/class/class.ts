@@ -47,9 +47,7 @@
     // 注意此处 ! 的用法，如果不加 ! 的话会编译报错的
     console.log(a.age! * 2); // NaN
     a.age = 44;
-    console.log(a.age); // 44
-    // 注意此处 ! 的用法，如果不加 ! 的话会编译报错的
-    console.log(a.age! * 2); // 88
+    console.log(a.age * 2); // 88
 
     a.description = "I am wanglei.";
     console.log(a.description); // I am wanglei.
@@ -57,6 +55,14 @@
     console.log(Person.num); // 1314
 
     console.log(Person.hello("webabcd")); // hello: webabcd
+
+    // 可以通过 delete 删除 ? 声明的属性
+    delete a.age;
+    console.log(a.age); // undefined
+    
+    // 无法通过 delete 删除非 ? 声明的属性
+    // 下面这句会编译报错
+    // delete a.name;
 }
 
 {
