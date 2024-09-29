@@ -37,6 +37,11 @@
         static hello(name:string) {
             return `hello: ${name}`
         }
+
+        // 静态块，类似于静态构造函数，只会在类的第一次实例化时执行一次，后续实例化不会再执行
+        static {
+            console.log("static block");
+        }
     }
     
     let a = new Person('webabcd', 123, "male");
