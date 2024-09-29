@@ -64,9 +64,17 @@
 }
 
 {
-    // 也可以这么声明数据类型
-    let a: {key: string, value: string} = {key: "key", value: "value"};
+    // 通过 interface 声明一个自定义的数据类型
+    interface MyInterface {
+        key: string;
+        value: string;
+    }
+    let a: MyInterface = {key: "key", value: "value"};
     console.log(a.key, a.value); // key value
+    
+    // 也可以这么声明自定义的数据类型
+    let b: {key: string, value: string} = {key: "key", value: "value"};
+    console.log(b.key, b.value); // key value
 }
 
 {
