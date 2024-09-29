@@ -70,6 +70,11 @@
 }
 
 {
+    // 支持隐式转换
+    let a: number = 100;
+    let b = a + "abc" 
+    console.log(b); // 100abc
+
     // if 会将 0, "", null, undefined, NaN 隐式地转换为布尔值 false
     if (!0 && !"" && !null && !undefined && !NaN) {
         console.log("if 条件的隐式转换");
