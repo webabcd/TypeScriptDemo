@@ -174,7 +174,7 @@
         // 通过 instanceof 判断一个基类对象是否是某个子类对象
         if (animal instanceof Dog) 
         {
-            // 通过 as 将基类对象转换为子类对象
+            // 通过 as 将基类对象转换为子类对象（这里的 as 被称为类型断言 Type Assertions）
             let dog = animal as Dog;
             dog.run();
         }

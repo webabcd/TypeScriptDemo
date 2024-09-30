@@ -13,6 +13,22 @@
     // 定义为 any 类型，则可以赋值为任意基本类型或任意对象
     let g: any = "xyz";
     g = new Date();
+
+    // 定义为 unknown 类型，则可以赋值为任意基本类型或任意对象
+    let h: unknown = "xyz";
+    h = new Date();
+
+    // any 和 unknown 的区别
+    // console.log(g.toUpperCase()); // 运行时报错（any 不做类型检查，所以编译时不会报错）
+    // console.log(h.toUpperCase()); // 编译时报错（unknown 做类型检查，所以编译时会报错）
+
+    // 通过 typeof 或 as 后才能调用 unknown 的属性或方法
+    let i: unknown = "abc";
+    if (typeof i === "string") {
+        console.log(i.toUpperCase()); // ABC
+    }
+    let j = i as string;
+    console.log(j.toUpperCase()); // ABC
 }
 
 {
@@ -122,7 +138,7 @@
         // 通过 instanceof 判断一个基类对象是否是某个子类对象
         if (animal instanceof Dog) 
         {
-            // 通过 as 将基类对象转换为子类对象
+            // 通过 as 将基类对象转换为子类对象（这里的 as 被称为类型断言 Type Assertions）
             let dog = animal as Dog;
             dog.run();
         }
