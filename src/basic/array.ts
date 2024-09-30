@@ -13,6 +13,20 @@
     console.log(array7, array7[0]); // [1, undefined, 3] 1
 
 
+    // 遍历
+    for (let value of array1) {
+        console.log(value);
+    }
+    // 遍历
+    array1.forEach((value) => {
+        console.log(value);
+    });
+    // 遍历
+    array1.forEach((value, index) => {
+        console.log(index, value);
+    });
+
+
     let a = [1, 2, 3];
     let b = [2, 3, 4];
     // 数组连接，结果不排重（需要排重的话，可以参见 set 的说明）
