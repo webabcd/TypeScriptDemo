@@ -28,7 +28,6 @@
     }, function(error) {
         console.log('b:' + error) // b:pending to rejected
     });
-    // 返回结果为 fulfilled 或 rejected
 
     // 如果有多个 then() 则都会收到回调
     // 如果 then() 的时候，promise 没有完成，则在 promise 完成的时候会收到回调
@@ -38,7 +37,6 @@
     }, function(error) {
         console.log('d:' + error) // d:pending to rejected
     });
-    // 返回结果为 fulfilled 或 rejected
 
 
     // Promise.resolve() - 将指定的对象转换为 fulfilled 状态的 Promise 对象并返回
