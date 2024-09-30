@@ -78,6 +78,9 @@
     class Class1<T> {
         salt?: T;
         add?: (x: T, y: T) => T;
+        hello(x: T):string {
+            return `hello:${x}`;
+        }
     }
     
     let a = new Class1<number>();
@@ -86,5 +89,5 @@
         return (x + y) * this.salt!; 
     };
 
-    console.log(a.add(2, 3)); // 50
+    console.log(a.add(2, 3), a.hello(100)); // 50 hello:100
 }
