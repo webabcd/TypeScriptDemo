@@ -76,6 +76,7 @@
         public constructor(public name:string) {
           this.name = name;
         }
+        // 抽象方法
         public abstract hello():string;
         // 抽象类可以定义有具体逻辑的方法
         public walk():string {
