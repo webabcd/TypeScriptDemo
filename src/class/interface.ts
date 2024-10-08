@@ -25,15 +25,19 @@
     interface Person {
         name: string;
         age?: number; // 通过 ? 定义可选属性
+        hello?(): void; // 通过 ? 定义可选方法
     };
     
-    // 变量的形状必须和接口的形状保持一致，且可选属性可以不定义
+    // 变量的形状必须和接口的形状保持一致，且可选属性和可选方法可以不定义
     let webabcd1: Person = {
         name: 'webabcd',
     };
     let webabcd2: Person = {
         name: 'webabcd',
-        age: 44
+        age: 44,
+        hello(): void {
+
+        }
     };
 }
 

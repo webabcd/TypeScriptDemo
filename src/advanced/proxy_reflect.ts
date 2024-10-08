@@ -83,12 +83,13 @@
             return this.name + this.age;
         }
     }
-    // Reflect.get() - 获取指定对象的指定属性
-    console.log(Reflect.get(target4, "hello")); // wanglei40
-    // Reflect.get() - 获取指定对象的指定属性（对象中的 this 会指向 Reflect.get() 的第 3 个参数）
+    // Reflect.get() - 调用指定对象的指定方法
+    console.log(Reflect.get(target4, "hello")); // webabcd40
+    // Reflect.get() - 调用指定对象的指定方法（对象中的 this 会指向 Reflect.get() 的第 3 个参数）
     console.log(Reflect.get(target4, "hello", {name: "xyz"})); // xyzundefined
     // Reflect.set() - 设置指定对象的指定属性
     Reflect.set(target4, 'name', "abc");
+    // Reflect.get() - 获取指定对象的指定属性
     console.log(Reflect.get(target4, "name")); // abc
 
 
