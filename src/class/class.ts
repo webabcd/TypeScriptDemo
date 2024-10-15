@@ -182,3 +182,33 @@
     }
     f1(new Dog("dog"));
 }
+
+// 关于普通函数和箭头函数的 this 指向问题
+{
+    class Person {
+        constructor(public name:string) {
+
+        }
+
+        // 普通函数定义的是原型方法，动态 this
+        hello() {
+            return `hello:${this.name}`;
+        }
+
+        // 箭头函数定义的是实例方法，静态 this
+        hello2 = () => {
+            return `hello:${this.name}`;
+        }
+    }
+    
+    let a = new Person('webabcd');
+    let b = new Person('wanglei');
+
+    console.log(a.hello()); // hello:webabcd
+    console.log(a.hello2()); // hello:webabcd
+
+    // 普通函数定义的是原型方法，动态 this，可以通过 call() 修改 this 的指向
+    console.log(a.hello.call(b)); // hello:wanglei
+    // 箭头函数定义的是实例方法，静态 this，无法通过 call() 修改 this 的指向
+    console.log(a.hello2.call(b)); // hello:webabcd
+}
