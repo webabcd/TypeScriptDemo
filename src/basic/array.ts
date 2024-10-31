@@ -12,7 +12,11 @@
     let array7 = Array.from([1, , 3]);
     console.log(array7, array7[0]); // [1, undefined, 3] 1
 
-
+    
+    // 遍历
+    for (let i = 0; i < array1.length; i++) {  
+        console.log(array1[i]);  
+    }
     // 遍历
     for (let value of array1) {
         console.log(value);
