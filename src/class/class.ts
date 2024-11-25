@@ -212,3 +212,63 @@
     // 箭头函数定义的是实例方法，静态 this，无法通过 call() 修改 this 的指向
     console.log(a.hello2.call(b)); // hello:webabcd
 }
+
+// 关于 ? 与 ! 的用法
+{
+    class Person {
+        constructor(public name:string) {
+
+        }
+        hello() {
+            return `hello:${this.name}`;
+        }
+        static create(name:string | undefined) {
+            if (name === undefined) {
+                return undefined;
+            }
+            return new Person(name);
+        }
+    }
+    
+    let a = Person.create('webabcd');
+    let b = Person.create(undefined);
+
+    // 编译时报错
+    // console.log(a.hello());
+    
+    console.log(a?.hello()); // hello:webabcd
+
+    console.log(a!.hello()); // hello:webabcd
+
+    // 编译时报错
+    // console.log(b.hello());
+
+    console.log(b?.hello()); // undefined
+
+    // 运行时报错
+    // console.log(b!.hello());
+}
+
+// 关于 ?.() 的用法
+{
+    interface Person {
+        name: string;
+        hello?: () => string;
+    }
+    const person1: Person = {
+        name: "webabcd",
+        hello() {
+            return `hello: ${this.name}`;
+        }
+    }
+    const person2: Person = {
+        name: "wanglei",
+    };
+    
+    // 编译时报错
+    // console.log(person1.hello())
+    // console.log(person2.hello())
+
+    console.log(person1.hello?.()) // hello: webabcd
+    console.log(person2.hello?.()) // undefined
+}
