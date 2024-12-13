@@ -82,7 +82,7 @@
     // 类通过 extends 继承
     class Dog extends Animal {
         public constructor(name:string) {
-            // 调用父类的构造函数
+            // 调用父类的构造函数（注：子类如果定义了构造函数，则必须要调用父类的构造函数）
             super("dog name:" + name);
         }
         public hello():string {
