@@ -71,6 +71,32 @@
 }
 
 {
+    class Animal {
+        public constructor(public name:string) {
+            this.name = name;
+        }
+        public hello():string {
+            return `hello`;
+        }
+    }
+    // 类通过 extends 继承
+    class Dog extends Animal {
+        public constructor(name:string) {
+            // 调用父类的构造函数
+            super("dog name:" + name);
+        }
+        public hello():string {
+            // 调用父类的方法
+            return `${super.hello()}`;
+        }
+    }
+
+    let dog:Dog = new Dog("collie");
+    console.log(dog.name); // dog name:collie
+    console.log(dog.hello()); // hello
+}
+
+{
     // 抽象类不允许被实例化
     abstract class Animal {
         public constructor(public name:string) {
