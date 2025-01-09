@@ -166,3 +166,32 @@
     let observableObj = observable(myObj);
     observableObj.name = "wanglei";
 }
+
+
+// Record - 让对象支持通过 .key 获取 value
+{
+    let a = {
+      width: 100,
+      height: 200,
+    };
+  
+    let b = a as Object as Record<string, number>
+    console.log(`${b.width}, ${b.height}, ${b.xxx}`); // 100, 200, undefined
+  }
+  
+  
+  // Partial - 实例化时允许只初始化接口的部分属性
+  {
+    interface Person {
+      name: string;
+      age: number;
+    }
+    let a: Partial<Person> = {
+      // 可以只初始化部分属性，或者所有属性都不初始化
+      name: "webabcd",
+    };
+  
+    console.log(`name:${a.name}, age:${a.age}`); // name:webabcd, age:undefined
+    a.age = 44
+    console.log(`name:${a.name}, age:${a.age}`); // name:webabcd, age:44
+  }

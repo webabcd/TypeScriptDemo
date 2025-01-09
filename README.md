@@ -62,7 +62,7 @@
 - advanced/async_await.ts
 4. iterator, generator
 - advanced/iterator_generator.ts
-5. proxy, reflect
+5. proxy, reflect, record, partial
 - advanced/proxy_reflect.ts
 
 ### 第三方库
