@@ -7,8 +7,12 @@
 
     // 对象数据类型，即通过 new 出来的对象
     let e: Date = new Date();
-    // 定义为 object 类型，则可以赋值为任意对象
-    let f: object = new Date();
+
+    // 定义为 Object 类型，则可以赋值为任意基本类型或任意对象（不可以赋值为 null 和 undefined）
+    let f1: Object = new Date();
+
+    // 定义为 object 类型，则可以赋值为任意对象（不可以赋值为基本数据类型，以及 null 和 undefined）
+    let f2: object = new Date();
 
     // 定义为 any 类型，则可以赋值为任意基本类型或任意对象
     let g: any = "xyz";
